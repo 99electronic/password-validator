@@ -2,7 +2,7 @@
 pass1 & pass2 are password inputs with class passwords on both
 */
 $(function() {
-    let type = 0;//letters/capital letters/numbers and special char required - SEE SWITCH ON row 28
+    let type = 0;//letters/capital letters/numbers and special char required - SEE SWITCH ON row 31
     $('.passwords')
         .on('input change', function() {
             validatePassword($('#pass1'),$('#pass2'), type);
