@@ -1,0 +1,43 @@
+<!-- 99electronic.com simple password validator -->
+<!-- there is jquery library used, but it is not necessary-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script   src="https://code.jquery.com/jquery-3.6.1.slim.min.js"></script><!-- this is required-->
+    <script   src="validator.js"></script><!-- this is required-->
+    <title>password validator test</title>
+</head>
+<body style="font-family: Tahoma;">
+    <div style="margin-top:50px;text-align: center;">
+        <div>
+            <!-- where password validators shows results START-->
+            <div class="text-right text-form-small p-err-container" style="margin-top:5px;visibility:hidden;">
+                <span id="p-err-a">[a-z]</span><!-- put anything hrer to match letters -->
+                <span id="p-err-b">[A-Z]</span><!-- put anything hrer to match capital letters -->
+                <span id="p-err-n">[0-9]</span><!-- put anything hrer to match numbers -->
+                <span id="p-err-s">spec.char</span><!-- put anything hrer to match special chars. -->
+                <span id="p-err-l">min. 8</span><!-- put anything hrer to match min. len -->
+            </div>
+            <!-- where password validators shows results END-->
+            <label>new secret password:</label>
+            <br>
+            <input type="password" id="pass1" class="passwords" style="height:25px;width:200px;margin-top:10px;border:2px solid gray;">
+        </div>
+        <div style="margin-top:10px">
+            <!-- where password MATCH validators shows results START (p-err-m can be inside of first validator display if desired) -->
+            <div class="text-right text-form-small p-err-container" style="margin-top:5px;visibility:hidden;">
+                <span id="p-err-m">must match</span><!-- put anything hrer show match/no-match -->
+            </div>
+            <!-- where password MATCH validators shows results END-->
+            <label>same password again:</label>
+            <br>
+            <input type="password" id="pass2" class="passwords" style="height:25px;width:200px;margin-top:10px;border:2px solid gray;">
+        </div>
+        <div>
+            <!-- button we would change the style is here #submit-->
+            <button id="submit" disabled style="margin-top:25px;width:200px;">submit</button>
+        </div>
+    </div>
+</body>
+</html>
