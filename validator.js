@@ -13,7 +13,7 @@ let validatePassword = function(options) {
     options.pass1 = '#' + options.pass1;
     options.pass2 = '#' + options.pass2;
     $(options.pass1 + ',' + options.pass2)
-        .on('input change', function() {
+        .on('input change', ()=>{
             let e = {}
             let p1 = $(options.pass1).val();
             let p2 = $(options.pass2).val();
