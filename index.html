@@ -50,7 +50,7 @@
 
 </div>
 <script>
-    $(function(){
+    $(()=>{
         //SET OPTIONS
         let options = {
             pass1:'pass1',          //pass1 id
@@ -59,23 +59,23 @@
             type:0,                 //0[letter,capital,number,spec],1[letter,capital and number],2[number,letter]
             helpers:true,           //bool hide/show form helpers when everything is empty
                                     //CALL THIS TO ENABLE/DISABLE SUBMIT or anything based on i=true/false
-            callback:function(i, password) {
+            callback:=>(i, password) {
                 $('#submit')
                     .prop('disabled', i)
                     //OPTIONAL SUBMIT CLICK BUTTON CALLBACK
                     .off('click')
-                    .on('click', function() {
+                    .on('click', ()=>{
                         submit_form(password);
                     });
             },
             //CALL THIS TO CHANGE PASS1 CSS or anything based on i=true/false
-            callback_pass1:function(i) {
+            callback_pass1:(i)=>{
                 //change input style when valid password
                 $('#pass1')
                     .css('border','2px solid ' + (i?'green':'gray'));
             },
             //CALL THIS TO CHANGE PASS1 CSS or anything based on i=true/false
-            callback_pass2:function(i) {
+            callback_pass2:(i)=>{
                 //change input style when valid password
                 $('#pass2')
                     .css('border','2px solid ' + (i?'green':'gray'));
@@ -86,7 +86,7 @@
         validatePassword(options);
 
         //SUBMIT FORM WITH PASSWORD
-        let submit_form = function(password) {
+        let submit_form = (password)=>{
             //password contains password value
             alert('valid password: ' + password);
         }
