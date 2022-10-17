@@ -59,7 +59,7 @@
             type:0,                 //0[letter,capital,number,spec],1[letter,capital and number],2[number,letter]
             helpers:true,           //bool hide/show form helpers when everything is empty
                                     //CALL THIS TO ENABLE/DISABLE SUBMIT or anything based on i=true/false
-            callback:=>(i, password) {
+            callback:(i, password)=>{
                 $('#submit')
                     .prop('disabled', i)
                     //OPTIONAL SUBMIT CLICK BUTTON CALLBACK
