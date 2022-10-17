@@ -53,7 +53,7 @@ let validatePassword = function(options) {
                     break;
             }
             let i = 0;
-            $.each(e, function(key, pass) {
+            $.each(e, (key, pass)=>{
                 //count valid passes
                 i = i + pass;
                 //set style of each sub-errors
